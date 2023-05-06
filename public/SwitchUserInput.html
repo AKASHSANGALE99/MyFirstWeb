@@ -1,0 +1,48 @@
+<html>
+<head>
+    <title>Document</title>
+    <script>
+        function fun() 
+        {
+            var n1=document.getElementById('a').value
+            n1=parseInt(n1);
+            var n2=document.getElementById('b').value
+            n2=parseInt(n2);
+            var c=document.getElementById("c").value
+            var ans=0;
+            switch(c)
+            {
+                case '+':ans=n1+n2;break;
+                case '-':ans=n1-n2;break;  
+                case '*':ans=n1*n2;break;        
+                case '/':ans=n1/n2;break;
+                case '%':ans=n1%n2;break;
+                 case 'sqr':ans=n1*n1; ans=`ans of ${n1} ${c}  is ${ans}`;break;
+            
+            }
+           if(c!="sqr")
+            {ans=`ans of ${n1} ${c} ${n2} is ${ans}`
+        }
+            document.getElementById('ans').innerText=ans;
+        }
+    </script>
+</head>
+<body>
+    <pre>
+    <input id="a">
+    <input id="b">
+    <select id="c" onclick="fun()">
+        <option>select</option>
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+        <option value="%">%</option>
+        <option value="sqr">sqr</option>
+
+    </select>
+<p id="ans"></p>
+    <!-- <button onclick="fun()">ok</button> -->
+</pre>  
+</body>
+</html>

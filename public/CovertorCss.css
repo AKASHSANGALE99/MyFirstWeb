@@ -1,0 +1,33 @@
+div{
+    height: 400px;
+    width: 60%;
+    background-color: lightgrey;
+    border-radius: 100%;
+    border: groove;
+    border-width: 20px;
+    border-color: silver;
+
+}
+
+div pre input
+{
+    height: 35px;
+    font-size: 2em;
+    width: fit-content;
+width: 150px;
+border-radius: 5px;
+}
+b{
+    font-size: 2em;
+     color: red;
+}
+#ans
+{
+    font-size: 4em;
+}
+select
+{ border:solid;
+    border-radius: 10px;
+    background-color: rgb(201, 225, 240);
+    font-size: 2em;
+}

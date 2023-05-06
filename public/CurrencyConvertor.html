@@ -1,0 +1,58 @@
+<html>
+<head>
+    <title>Document</title>
+    <script>
+function fun()
+{
+    var num=parseInt(document.getElementById("cur").value);
+var from=document.getElementById("from").value;
+var to=document.getElementById("to").value;
+if(from==to)
+{
+
+}
+else if(from=='dol' && to=='euro')
+    num=num*0.907;
+
+else if(from=='rs'&& to=='dol')
+    num=num*1.0/82;
+else if(from=='rs' && to=='euro')
+num=num*0.011;
+else if(from=='dol' && to=='rs')
+num=num*82;
+else if(from=='euro' && to=='rs')
+num=num*90.06;
+else if(from=='euro' && to=='dol')
+num=num*1.10;
+document.getElementById('ans').innerHTML=num;
+
+}
+
+
+    </script>
+</head>
+<body style="background-color:red">
+    <center><div style="border-radius: 25px; border:solid;  width: 50%; height: 300px; background-color: bisque;">
+    <pre>
+
+
+
+
+   amount: <input type="number" id="cur" style="height: 50px; width:90px;font-size:30px;color:red;background-color: gray; "> 
+   <select id="from"  style="height: 40px; background-color: yellow;" onchange="fun()">
+        <option>from</option>
+<option value='euro'>&#8364</option>
+<option value="rs">&#8377</option>
+<option value="dol">$</option>
+   </select>
+    <select id="to" style="height: 40px; background-color: yellow;" onchange="fun()">
+<option>to</option>
+<option value='euro'>&#8364</option>
+<option value="rs">&#8377</option>
+<option value="dol">$</option>
+</select>
+<p id="ans" style="font-size:40px; background-color: blue; width: fit-content;"></p>
+</pre></div>
+</center>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<html>
+<head>
+<script>
+function fun1()
+{
+let e1=document.getElementById("e");
+let str=e1.value.toUpperCase();
+
+document.getElementById("f").innerHTMl=str
+}
+function fun2()
+{
+let e1=document.getElementById("e");
+let str=e1.value.toLowerCase();
+document.getElementById("f").innerHTML=str
+}
+function fun3()
+{
+let e1=document.getElementById("e");
+let str=e1.value;
+let cap=str.substring(0,1).toUpperCase()
+ cap=cap.concat(str.substring(1));
+
+document.getElementById("f").innerHTML=cap
+}
+
+</script>
+</head>
+<body>
+<pre>
+<input type="text" id="e">
+<p id="f"></p>
+<button onclick="fun1()">upperCase</button>
+<button onclick="fun2()">lowerCase</button>
+<button onclick="fun3()">titleCase</button>
+</pre>
+</body>
+</html>

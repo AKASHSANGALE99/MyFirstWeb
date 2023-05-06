@@ -1,0 +1,63 @@
+<html>
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="./CovertorCss.css">
+    <script>
+function fun()
+{
+    var num=parseInt(document.getElementById("cur").value);
+var from=document.getElementById("from").value;
+var to=document.getElementById("to").value;
+if(from==to)
+{
+
+}
+else if(from=='dol' && to=='euro')
+    num=num*0.907;
+
+else if(from=='rs'&& to=='dol')
+    num=num*1.0/82;
+else if(from=='rs' && to=='euro')
+num=num*0.011;
+else if(from=='dol' && to=='rs')
+num=num*82;
+else if(from=='euro' && to=='rs')
+num=num*90.06;
+else if(from=='euro' && to=='dol')
+num=num*1.10;
+document.getElementById('ans').innerHTML=num;
+
+}
+
+
+    </script>
+</head>
+<body >
+    <br>
+    <br><br>
+    <center><div> 
+    <pre>
+
+
+
+<br><br>
+   <u><b>amount:</b></u> <input type="number" id="cur"  "> 
+   <br>
+   <select id="from"  onchange="fun()">
+        <option>from</option>
+<option value='euro'>&#8364</option>
+<option value="rs">&#8377</option>
+<option value="dol">$</option>
+   </select>
+   
+    <select id="to"  onchange="fun()">
+<option>to</option>
+<option value='euro'>&#8364</option>
+<option value="rs">&#8377</option>
+<option value="dol">$</option>
+</select>
+<p id="ans" ></p>
+</pre></div>
+</center>
+</body>
+</html>
